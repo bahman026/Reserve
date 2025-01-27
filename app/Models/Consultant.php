@@ -20,6 +20,7 @@ use Illuminate\Support\Carbon;
 class Consultant extends Model
 {
     protected $fillable = ['full_name', 'email'];
+
     public function appointments(): HasMany
     {
         return $this->hasMany(Appointment::class);
