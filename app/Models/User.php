@@ -11,8 +11,6 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
 
 /**
- *
- *
  * @property int $id
  * @property string $name
  * @property string $email
@@ -26,6 +24,7 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory;
+
     use Notifiable;
 
     /**
