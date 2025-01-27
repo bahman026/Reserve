@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Consultant extends Model
 {
-    protected $fillable = ['name', 'email', 'phone'];
+    protected $fillable = ['full_name', 'email'];
 }
