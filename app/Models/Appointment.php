@@ -13,6 +13,8 @@ use Illuminate\Support\Carbon;
  * @property int $consultant_id
  * @property int $client_id
  * @property string $appointment_date
+ * @property Consultant $consultant
+ * @property Client $client
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  */
