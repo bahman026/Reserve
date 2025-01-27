@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use Database\Factories\AppointmentFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
@@ -20,6 +22,8 @@ use Illuminate\Support\Carbon;
  */
 class Appointment extends Model
 {
+    /** @use HasFactory<AppointmentFactory> */
+    use HasFactory;
     protected $fillable = [
         'consultant_id',
         'client_id',
