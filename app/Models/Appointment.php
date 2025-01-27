@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 
 /**
@@ -21,7 +22,16 @@ class Appointment extends Model
         'consultant_id',
         'client_id',
         'appointment_date',
-        'status',
-        'notes',
     ];
+
+    public function consultant(): BelongsTo
+    {
+        return $this->belongsTo(Consultant::class);
+    }
+
+
+    public function client(): BelongsTo
+    {
+        return $this->belongsTo(Client::class);
+    }
 }
