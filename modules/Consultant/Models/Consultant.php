@@ -2,14 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\Models;
+namespace Modules\Consultant\Models;
 
-use Database\Factories\ConsultantFactory;
+use App\Models\Appointment;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
+use Modules\Consultant\Database\Factories\ConsultantFactory;
 
 /**
  * @property int $id
@@ -25,6 +27,11 @@ class Consultant extends Model
     use HasFactory;
 
     protected $fillable = ['full_name', 'email'];
+
+    protected static function newFactory(): ConsultantFactory | Factory
+    {
+        return ConsultantFactory::new();
+    }
 
     public function appointments(): HasMany
     {
