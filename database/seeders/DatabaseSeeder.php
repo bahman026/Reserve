@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Modules\Appointment\Database\Seeders\AppointmentSeeder;
 use Modules\Client\Database\Seeders\ClientSeeder;
 use Modules\Consultant\Database\Seeders\ConsultantSeeder;
 
