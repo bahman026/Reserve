@@ -22,6 +22,7 @@ class AppointmentResource extends JsonResource
             'client_id' => $this->resource->client_id,
             'appointment_date' => $this->resource->appointment_date,
             'client' => new ClientResource($this->whenLoaded('client')),
+            'consultant' => new ConsultantResource($this->whenLoaded('consultant')),
         ];
     }
 }
