@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Client\Http\Resources;
 
-use App\Http\Resources\AppointmentResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Modules\Appointment\Http\Resources\AppointmentResource;
 
 class ClientResource extends JsonResource
 {

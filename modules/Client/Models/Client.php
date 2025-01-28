@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Client\Models;
 
-use App\Models\Appointment;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
+use Modules\Appointment\Models\Appointment;
 use Modules\Client\Database\Factories\ClientFactory;
 
 /**
