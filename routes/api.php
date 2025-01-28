@@ -4,21 +4,7 @@ declare(strict_types=1);
 
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\ClientController;
-use App\Http\Controllers\ConsultantController;
 use Illuminate\Support\Facades\Route;
-
-Route::prefix('consultants')
-    ->as('consultant.')
-    ->group(function () {
-        Route::get('/', [ConsultantController::class, 'index'])
-            ->name('index');
-
-        Route::post('/', [ConsultantController::class, 'store'])
-            ->name('store');
-
-        Route::get('{consultant:id}', [ConsultantController::class, 'show'])
-            ->name('show');
-    });
 
 Route::prefix('clients')
     ->as('clients.')
