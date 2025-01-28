@@ -36,12 +36,12 @@ class AppointmentController extends Controller
             $appointment = $storeAppointmentAction($request);
 
             return response()->json([
-                'message' => trans('appointment.appointment_created_successfully'),
+                'message' => trans('appointment::appointment.appointment_created_successfully'),
                 'appointment' => new AppointmentResource($appointment),
             ], 201);
         } catch (Throwable $throwable) {
             return response()->json([
-                'message' => trans('appointment.error_creating_appointment'),
+                'message' => trans('appointment::appointment.error_creating_appointment'),
                 'error' => $throwable->getMessage(),
             ], 500);
         }

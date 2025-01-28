@@ -36,12 +36,12 @@ class ClientController extends Controller
             $client = $storeClientAction($request);
 
             return response()->json([
-                'message' => trans('client.client_created_successfully'),
+                'message' => trans('client::client.client_created_successfully'),
                 'client' => new ClientResource($client),
             ], 201);
         } catch (Throwable $throwable) {
             return response()->json([
-                'message' => trans('client.error_creating_client'),
+                'message' => trans('client::client.error_creating_client'),
                 'error' => $throwable->getMessage(),
             ], 500);
         }

@@ -13,6 +13,7 @@ class AppointmentServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
         $this->app->register(RouteServiceProvider::class);
         $this->app->register(RepositoryServiceProvider::class);
+        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'appointment');
 
     }
 }
