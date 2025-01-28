@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Jobs;
+namespace Modules\Appointment\Jobs;
 
-use App\Events\AppointmentCreatedEvent;
-use App\Models\Appointment;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
+use Modules\Appointment\Events\AppointmentCreatedEvent;
+use Modules\Appointment\Models\Appointment;
 
 class SendAppointmentEmails implements ShouldQueue
 {

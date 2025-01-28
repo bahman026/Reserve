@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Models;
+namespace Modules\Appointment\Models;
 
-use Database\Factories\AppointmentFactory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
+use Modules\Appointment\Database\Factories\AppointmentFactory;
 use Modules\Client\Models\Client;
 use Modules\Consultant\Models\Consultant;
 
@@ -32,6 +33,11 @@ class Appointment extends Model
         'client_id',
         'appointment_date',
     ];
+
+    protected static function newFactory(): AppointmentFactory | Factory
+    {
+        return AppointmentFactory::new();
+    }
 
     public function consultant(): BelongsTo
     {

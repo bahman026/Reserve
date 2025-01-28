@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Database\Seeders;
+namespace Modules\Appointment\Database\Seeders;
 
-use App\Models\Appointment;
 use Illuminate\Database\Seeder;
+use Modules\Appointment\Models\Appointment;
 
 class AppointmentSeeder extends Seeder
 {

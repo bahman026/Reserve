@@ -2,17 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Database\Factories;
+namespace Modules\Appointment\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Appointment\Models\Appointment;
 use Modules\Client\Models\Client;
 use Modules\Consultant\Models\Consultant;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Appointment>
+ * @extends Factory<Appointment>
  */
 class AppointmentFactory extends Factory
 {
+    protected $model = Appointment::class;
+
     /**
      * Define the model's default state.
      *

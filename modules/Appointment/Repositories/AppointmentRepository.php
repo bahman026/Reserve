@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Repositories;
+namespace Modules\Appointment\Repositories;
 
-use App\Models\Appointment;
-use App\Repositories\Interfaces\AppointmentRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
+use Modules\Appointment\Models\Appointment;
+use Modules\Appointment\Repositories\Interfaces\AppointmentRepositoryInterface;
 
 class AppointmentRepository implements AppointmentRepositoryInterface
 {

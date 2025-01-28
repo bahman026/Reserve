@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Events;
+namespace Modules\Appointment\Events;
 
-use App\Models\Appointment;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Modules\Appointment\Models\Appointment;
 
 class AppointmentCreatedEvent
 {

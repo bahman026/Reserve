@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Listeners;
+namespace Modules\Appointment\Listeners;
 
-use App\Events\AppointmentCreatedEvent;
-use App\Mail\AppointmentEmail;
 use Illuminate\Support\Facades\Mail;
+use Modules\Appointment\Events\AppointmentCreatedEvent;
+use Modules\Appointment\Mail\AppointmentEmail;
 
 class SendAppointmentEmailListener
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Actions;
+namespace Modules\Appointment\Actions;
 
-use App\DTOs\AppointmentDTO;
-use App\Http\Requests\AppointmentRequest;
-use App\Jobs\SendAppointmentEmails;
-use App\Repositories\Interfaces\AppointmentRepositoryInterface;
 use Illuminate\Support\Facades\DB;
+use Modules\Appointment\DTOs\AppointmentDTO;
+use Modules\Appointment\Http\Requests\AppointmentRequest;
+use Modules\Appointment\Jobs\SendAppointmentEmails;
+use Modules\Appointment\Repositories\Interfaces\AppointmentRepositoryInterface;
 use Throwable;
 
 readonly class StoreAppointmentAction

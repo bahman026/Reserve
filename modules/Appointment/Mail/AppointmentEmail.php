@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Mail;
+namespace Modules\Appointment\Mail;
 
-use App\Models\Appointment;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Modules\Appointment\Models\Appointment;
 
 class AppointmentEmail extends Mailable
 {

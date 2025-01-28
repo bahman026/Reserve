@@ -2,14 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers;
+namespace Modules\Appointment\Http\Controllers;
 
-use App\Actions\StoreAppointmentAction;
-use App\Http\Requests\AppointmentRequest;
-use App\Http\Resources\AppointmentResource;
-use App\Models\Appointment;
-use App\Repositories\Interfaces\AppointmentRepositoryInterface;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
+use Modules\Appointment\Actions\StoreAppointmentAction;
+use Modules\Appointment\Http\Requests\AppointmentRequest;
+use Modules\Appointment\Http\Resources\AppointmentResource;
+use Modules\Appointment\Models\Appointment;
+use Modules\Appointment\Repositories\Interfaces\AppointmentRepositoryInterface;
 use Throwable;
 
 class AppointmentController extends Controller
