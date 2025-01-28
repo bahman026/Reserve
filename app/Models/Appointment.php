@@ -24,6 +24,7 @@ class Appointment extends Model
 {
     /** @use HasFactory<AppointmentFactory> */
     use HasFactory;
+
     protected $fillable = [
         'consultant_id',
         'client_id',
