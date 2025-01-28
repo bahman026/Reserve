@@ -39,4 +39,9 @@ class AppointmentRepository implements AppointmentRepositoryInterface
     {
         return Appointment::query()->findOrFail($id);
     }
+
+    public function getAllAppointments(): Collection
+    {
+        return Appointment::with('consultant', 'client')->get();
+    }
 }
