@@ -16,10 +16,9 @@ Route::prefix('consultants')
         Route::post('/', [ConsultantController::class, 'store'])
             ->name('store');
 
-        Route::get('{consultant}', [ConsultantController::class, 'show'])
+        Route::get('{consultant:id}', [ConsultantController::class, 'show'])
             ->name('show');
     });
-
 
 Route::prefix('appointments')
     ->as('appointments.')
@@ -33,7 +32,6 @@ Route::prefix('appointments')
         Route::get('{appointment}', [AppointmentController::class, 'show'])
             ->name('show');
     });
-
 
 Route::prefix('clients')
     ->as('clients.')

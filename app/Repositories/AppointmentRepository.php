@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Repositories;
 
-use App\Models\Client;
+use App\Models\Appointment;
 use App\Repositories\Interfaces\AppointmentRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 
@@ -12,12 +12,12 @@ class AppointmentRepository implements AppointmentRepositoryInterface
 {
     public function create($data)
     {
-        return Client::query()->create($data);
+        return Appointment::query()->create($data);
     }
 
     public function update(array $data, $id)
     {
-        $user = Client::query()->findOrFail($id);
+        $user = Appointment::query()->findOrFail($id);
         $user->update($data);
 
         return $user;
@@ -25,18 +25,18 @@ class AppointmentRepository implements AppointmentRepositoryInterface
 
     public function delete($id): ?bool
     {
-        $user = Client::query()->findOrFail($id);
+        $user = Appointment::query()->findOrFail($id);
 
         return $user->delete();
     }
 
     public function all(): Collection
     {
-        return Client::all();
+        return Appointment::all();
     }
 
     public function find($id)
     {
-        return Client::query()->findOrFail($id);
+        return Appointment::query()->findOrFail($id);
     }
 }
