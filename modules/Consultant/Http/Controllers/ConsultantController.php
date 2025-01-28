@@ -2,14 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers;
+namespace Modules\Consultant\Http\Controllers;
 
-use App\Actions\StoreConsultantAction;
-use App\Http\Requests\ConsultantRequest;
-use App\Http\Resources\ConsultantResource;
-use App\Models\Consultant;
-use App\Repositories\Interfaces\ConsultantRepositoryInterface;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
+use Modules\Consultant\Actions\StoreConsultantAction;
+use Modules\Consultant\Http\Requests\ConsultantRequest;
+use Modules\Consultant\Http\Resources\ConsultantResource;
+use Modules\Consultant\Models\Consultant;
+use Modules\Consultant\Repositories\Interfaces\ConsultantRepositoryInterface;
 use Throwable;
 
 class ConsultantController extends Controller
@@ -52,7 +53,6 @@ class ConsultantController extends Controller
     public function show(Consultant $consultant): JsonResponse
     {
         $consultant->load('appointments.client');
-
         return response()->json(new ConsultantResource($consultant), 200);
     }
 }
