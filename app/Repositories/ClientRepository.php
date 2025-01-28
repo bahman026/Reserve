@@ -39,4 +39,9 @@ class ClientRepository implements ClientRepositoryInterface
     {
         return Client::query()->findOrFail($id);
     }
+
+    public function getAllWithAppointments(): Collection
+    {
+        return Client::with('appointments.consultant')->get();
+    }
 }
