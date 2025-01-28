@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Actions\StoreConsultantAction;
 use App\Http\Requests\ConsultantRequest;
 use App\Http\Resources\ConsultantResource;
+use App\Models\Consultant;
 use App\Repositories\Interfaces\ConsultantRepositoryInterface;
 use Illuminate\Http\JsonResponse;
 use Throwable;
@@ -43,5 +44,15 @@ class ConsultantController extends Controller
                 'error' => $throwable->getMessage(),
             ], 500);
         }
+    }
+
+    /**
+     * Show a specific consultant (with appointments)
+     */
+    public function show(Consultant $consultant): JsonResponse
+    {
+        $consultant->load('appointments.client');
+
+        return response()->json(new ConsultantResource($consultant), 200);
     }
 }
