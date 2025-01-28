@@ -20,7 +20,6 @@ Route::prefix('consultants')
             ->name('show');
     });
 
-
 Route::prefix('appointments')
     ->as('appointments.')
     ->group(function () {
@@ -33,7 +32,6 @@ Route::prefix('appointments')
         Route::get('{appointment}', [AppointmentController::class, 'show'])
             ->name('show');
     });
-
 
 Route::prefix('clients')
     ->as('clients.')
