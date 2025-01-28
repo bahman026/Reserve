@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Repositories;
+namespace Modules\Consultant\Repositories;
 
-use App\Models\Consultant;
-use App\Repositories\Interfaces\ConsultantRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
+use Modules\Consultant\Models\Consultant;
+use Modules\Consultant\Repositories\Interfaces\ConsultantRepositoryInterface;
 
 class ConsultantRepository implements ConsultantRepositoryInterface
 {

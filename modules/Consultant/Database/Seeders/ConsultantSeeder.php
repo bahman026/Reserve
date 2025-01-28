@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Database\Seeders;
+namespace Modules\Consultant\Database\Seeders;
 
-use App\Models\Consultant;
 use Illuminate\Database\Seeder;
+use Modules\Consultant\Models\Consultant;
 
 class ConsultantSeeder extends Seeder
 {

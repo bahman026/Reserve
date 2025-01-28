@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Actions;
+namespace Modules\Consultant\Actions;
 
 use App\DTOs\ConsultantDTO;
-use App\Http\Requests\ConsultantRequest;
-use App\Repositories\Interfaces\ConsultantRepositoryInterface;
 use Illuminate\Support\Facades\DB;
+use Modules\Consultant\Http\Requests\ConsultantRequest;
+use Modules\Consultant\Repositories\Interfaces\ConsultantRepositoryInterface;
 use Throwable;
 
 readonly class StoreConsultantAction

@@ -2,15 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Database\Factories;
+namespace Modules\Consultant\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Consultant\Models\Consultant;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Consultant>
+ * @extends Factory<Consultant>
  */
 class ConsultantFactory extends Factory
 {
+    protected $model = Consultant::class;
+
     /**
      * Define the model's default state.
      *
