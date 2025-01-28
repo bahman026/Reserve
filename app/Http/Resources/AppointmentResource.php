@@ -6,6 +6,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Modules\Client\Http\Resources\ClientResource;
 use Modules\Consultant\Http\Resources\ConsultantResource;
 
 class AppointmentResource extends JsonResource

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Repositories\Interfaces;
 
+use Core\Repositories\Interfaces\RepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 
 interface AppointmentRepositoryInterface extends RepositoryInterface
