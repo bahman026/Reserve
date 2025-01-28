@@ -28,4 +28,17 @@ class ConsultantRequest extends FormRequest
             'email' => 'required|email|unique:consultants,email',
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'full_name.required' => trans('validation.custom.full_name.required'),
+            'full_name.string' => trans('validation.custom.full_name.string'),
+            'full_name.max' => trans('validation.custom.full_name.max'),
+
+            'email.required' => trans('validation.custom.email.required'),
+            'email.email' => trans('validation.custom.email.email'),
+            'email.unique' => trans('validation.custom.email.unique'),
+        ];
+    }
 }
