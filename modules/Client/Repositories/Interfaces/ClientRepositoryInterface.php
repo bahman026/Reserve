@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Repositories\Interfaces;
+namespace Modules\Client\Repositories\Interfaces;
 
+use Core\Repositories\Interfaces\RepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 
 interface ClientRepositoryInterface extends RepositoryInterface

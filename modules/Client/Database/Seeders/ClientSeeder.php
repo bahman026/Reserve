@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Database\Seeders;
+namespace Modules\Client\Database\Seeders;
 
-use App\Models\Client;
 use Illuminate\Database\Seeder;
+use Modules\Client\Models\Client;
 
 class ClientSeeder extends Seeder
 {

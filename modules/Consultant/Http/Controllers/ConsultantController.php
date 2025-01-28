@@ -53,6 +53,7 @@ class ConsultantController extends Controller
     public function show(Consultant $consultant): JsonResponse
     {
         $consultant->load('appointments.client');
+
         return response()->json(new ConsultantResource($consultant), 200);
     }
 }

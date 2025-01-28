@@ -2,14 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers;
+namespace Modules\Client\Http\Controllers;
 
-use App\Actions\StoreClientAction;
-use App\Http\Requests\ClientRequest;
-use App\Http\Resources\ClientResource;
-use App\Models\Client;
-use App\Repositories\Interfaces\ClientRepositoryInterface;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
+use Modules\Client\Actions\StoreClientAction;
+use Modules\Client\Http\Requests\ClientRequest;
+use Modules\Client\Http\Resources\ClientResource;
+use Modules\Client\Models\Client;
+use Modules\Client\Repositories\Interfaces\ClientRepositoryInterface;
 use Throwable;
 
 class ClientController extends Controller

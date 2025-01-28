@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Consultant\Actions;
 
-use App\DTOs\ConsultantDTO;
 use Illuminate\Support\Facades\DB;
+use Modules\Consultant\DTOs\ConsultantDTO;
 use Modules\Consultant\Http\Requests\ConsultantRequest;
 use Modules\Consultant\Repositories\Interfaces\ConsultantRepositoryInterface;
 use Throwable;

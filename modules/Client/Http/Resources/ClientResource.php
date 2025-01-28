@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Resources;
+namespace Modules\Client\Http\Resources;
 
+use App\Http\Resources\AppointmentResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 

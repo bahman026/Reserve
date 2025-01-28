@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Actions;
+namespace Modules\Client\Actions;
 
-use App\DTOs\ClientDTO;
-use App\Http\Requests\ClientRequest;
-use App\Repositories\Interfaces\ClientRepositoryInterface;
 use Illuminate\Support\Facades\DB;
+use Modules\Client\DTOs\ClientDTO;
+use Modules\Client\Http\Requests\ClientRequest;
+use Modules\Client\Repositories\Interfaces\ClientRepositoryInterface;
 use Throwable;
 
 readonly class StoreClientAction

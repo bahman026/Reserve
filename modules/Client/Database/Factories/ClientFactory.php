@@ -2,15 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Database\Factories;
+namespace Modules\Client\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Client\Models\Client;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Client>
+ * @extends Factory<Client>
  */
 class ClientFactory extends Factory
 {
+    protected $model = Client::class;
+
     /**
      * Define the model's default state.
      *

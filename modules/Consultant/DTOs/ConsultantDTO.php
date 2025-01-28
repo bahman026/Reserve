@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\DTOs;
+namespace Modules\Consultant\DTOs;
 
 use Carbon\Carbon;
 
-class ClientDTO
+class ConsultantDTO
 {
     public function __construct(
         public string $full_name,

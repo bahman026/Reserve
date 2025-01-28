@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Repositories;
+namespace Modules\Client\Repositories;
 
-use App\Models\Client;
-use App\Repositories\Interfaces\ClientRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
+use Modules\Client\Models\Client;
+use Modules\Client\Repositories\Interfaces\ClientRepositoryInterface;
 
 class ClientRepository implements ClientRepositoryInterface
 {
