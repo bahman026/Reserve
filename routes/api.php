@@ -16,7 +16,7 @@ Route::prefix('consultants')
         Route::post('/', [ConsultantController::class, 'store'])
             ->name('store');
 
-        Route::get('{consultant}', [ConsultantController::class, 'show'])
+        Route::get('{consultant:id}', [ConsultantController::class, 'show'])
             ->name('show');
     });
 
