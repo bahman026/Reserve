@@ -29,7 +29,7 @@ Route::prefix('clients')
         Route::post('/', [ClientController::class, 'store'])
             ->name('store');
 
-        Route::get('{client}', [ClientController::class, 'show'])
+        Route::get('{client:id}', [ClientController::class, 'show'])
             ->name('show');
     });
 
@@ -42,6 +42,6 @@ Route::prefix('appointments')
         Route::post('/', [AppointmentController::class, 'store'])
             ->name('store');
 
-        Route::get('{appointment}', [AppointmentController::class, 'show'])
+        Route::get('{appointment:id}', [AppointmentController::class, 'show'])
             ->name('show');
     });
