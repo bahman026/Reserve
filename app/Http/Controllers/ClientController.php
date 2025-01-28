@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Actions\StoreClientAction;
 use App\Http\Requests\ClientRequest;
 use App\Http\Resources\ClientResource;
+use App\Models\Client;
 use App\Repositories\Interfaces\ClientRepositoryInterface;
 use Illuminate\Http\JsonResponse;
 use Throwable;
@@ -43,5 +44,15 @@ class ClientController extends Controller
                 'error' => $throwable->getMessage(),
             ], 500);
         }
+    }
+
+    /**
+     * Show a specific client (with appointments)
+     */
+    public function show(Client $client): JsonResponse
+    {
+        $client->load('appointments.consultant');
+
+        return response()->json(new ClientResource($client), 200);
     }
 }
