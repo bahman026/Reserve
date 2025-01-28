@@ -6,6 +6,7 @@ namespace App\Actions;
 
 use App\DTOs\AppointmentDTO;
 use App\Http\Requests\AppointmentRequest;
+use App\Jobs\SendAppointmentEmails;
 use App\Repositories\Interfaces\AppointmentRepositoryInterface;
 use Illuminate\Support\Facades\DB;
 use Throwable;
@@ -24,6 +25,8 @@ readonly class StoreAppointmentAction
             $appointmentDto = AppointmentDTO::fromArray($request->validated());
             $appointment = $this->appointmentRepository->create($appointmentDto->toArray());
             DB::commit();
+
+            SendAppointmentEmails::dispatch($appointment);
 
             return $appointment;
         } catch (Throwable $throwable) {
