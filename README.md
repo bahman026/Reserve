@@ -24,7 +24,7 @@ In this project, I utilized several design patterns, including the Repository Pa
       ```
     - To access the running container:
       ```bash
-      sudo docker exec -it -u www-data reserveapp_app bash
+      sudo docker exec -it -u www-data reserve_app bash
       ```
 
 ---
@@ -64,7 +64,7 @@ In this project, I utilized several design patterns, including the Repository Pa
 
 4. Access the application through the container by using the following command:
    ```bash
-   sudo docker exec -it -u www-data reserveapp_app bash
+   sudo docker exec -it -u www-data reserve_app bash
    ```
 5. Test the API endpoints using tools such as Postman or cURL.
 6. For email functionality, ensure the queue worker is running inside the container:
