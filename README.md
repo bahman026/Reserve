@@ -27,6 +27,13 @@ In this project, I utilized several design patterns, including the Repository Pa
       sudo docker exec -it -u www-data reserve_app bash
       ```
 
+5. **PHPUnit Testing for Modules:**
+    - Comprehensive tests have been implemented using PHPUnit for each module to ensure robust functionality.
+    - To run tests:
+      ```bash
+      php artisan test
+      ```
+
 ---
 
 ## Deployment Instructions
@@ -80,4 +87,3 @@ In this project, I utilized several design patterns, including the Repository Pa
 ---
 
 This README provides an overview of the ReserveApp project, its setup instructions, and deployment guidelines.
-
