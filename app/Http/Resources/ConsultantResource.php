@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Http\Resources;
 
-use App\Models\Consultant;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -17,11 +16,10 @@ class ConsultantResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        /** @var $this Consultant */
         return [
-            'id' => $this->id,
-            'full_name' => $this->full_name,
-            'email' => $this->email,
+            'id' => $this->resource->id,
+            'full_name' => $this->resource->full_name,
+            'email' => $this->resource->email,
             'appointments' => AppointmentResource::collection($this->whenLoaded('appointments')),
         ];
     }
