@@ -20,19 +20,6 @@ Route::prefix('consultants')
             ->name('show');
     });
 
-Route::prefix('appointments')
-    ->as('appointments.')
-    ->group(function () {
-        Route::get('/', [AppointmentController::class, 'index'])
-            ->name('index');
-
-        Route::post('/', [AppointmentController::class, 'store'])
-            ->name('store');
-
-        Route::get('{appointment}', [AppointmentController::class, 'show'])
-            ->name('show');
-    });
-
 Route::prefix('clients')
     ->as('clients.')
     ->group(function () {
@@ -43,5 +30,18 @@ Route::prefix('clients')
             ->name('store');
 
         Route::get('{client}', [ClientController::class, 'show'])
+            ->name('show');
+    });
+
+Route::prefix('appointments')
+    ->as('appointments.')
+    ->group(function () {
+        Route::get('/', [AppointmentController::class, 'index'])
+            ->name('index');
+
+        Route::post('/', [AppointmentController::class, 'store'])
+            ->name('store');
+
+        Route::get('{appointment}', [AppointmentController::class, 'show'])
             ->name('show');
     });
