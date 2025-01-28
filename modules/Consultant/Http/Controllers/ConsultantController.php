@@ -36,12 +36,12 @@ class ConsultantController extends Controller
             $consultant = $storeConsultantAction($request);
 
             return response()->json([
-                'message' => trans('consultant.consultant_created_successfully'),
+                'message' => trans('consultant::consultant.consultant_created_successfully'),
                 'consultant' => new ConsultantResource($consultant),
             ], 201);
         } catch (Throwable $throwable) {
             return response()->json([
-                'message' => trans('consultant.error_creating_consultant'),
+                'message' => trans('consultant::consultant.error_creating_consultant'),
                 'error' => $throwable->getMessage(),
             ], 500);
         }

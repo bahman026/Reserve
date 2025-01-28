@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Modules\Consultant\Http\Controllers\ConsultantController;
 
 Route::prefix('consultants')
-    ->as('consultant.')
+    ->as('consultants.')
     ->group(function () {
         Route::get('/', [ConsultantController::class, 'index'])
             ->name('index');
